@@ -1,0 +1,27 @@
+<!--<p>user-form works!</p>-->
+
+  <form #formData="ngForm" (ngSubmit)="AddUser(formData)">
+    <div>First Name = <input type="text" name="fname" [ngModel]="firstName" /> </div>
+    <div>Last Name  = <input type="text" name="lname" [ngModel]="lastName" /> </div>
+    <div>Phone Number = <input type="text" name="mob" [ngModel]="Phone" /></div>
+    <button> Submit</button>
+  </form>
+<!--(onclick)="addUser()"-->
+<!--<div *ngFor="let user in userList">
+  <ul class="user">
+    <li>
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+  </ul>
+</div>-->
+
+
+<!--<li *ngFor="let user in user">
+  <span>FirstName = {{firstName}} </span>
+</li>-->
+<div  *ngFor="let value of userList">
+  <div>FirstName = {{value.firstName}} </div>
+  <div>LastName  = {{value.lastName}} </div>
+  <div>Phone Number = {{value.Phone}}</div>
+</div>
+<span *ngIf="showList == true" style="color:red">"The mobile number already added.Please use a different one "</span>
